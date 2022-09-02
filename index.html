@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Lobster&display=swap" rel="stylesheet">
+ <title>personality</title>
+    <style>
+        *{
+            background-color: black;
+            color:white;
+            font-family: Bungee;
+            text-align: center;
+        }
+        h1{
+            font-size: 30px;
+            text-shadow: 3px 3px black;
+        }
+        .box{
+            width: 70%;
+            height: 80%;
+            background-color: gray;
+            padding: 30px;
+             margin:5cm;
+            margin-top: -1cm;
+            border: solid lightgrey 5px;
+            border-radius: 4px;
+        }
+        h3{
+            background-color: grey;
+            word-spacing: 5px;
+            margin:-4px;
+            text-shadow: 3px 3px black;
+
+        }
+        input[type="text"]{
+            background-color: pink;
+            color: white;
+            border-left-style: dotted;
+            width: 186px;margin-top: 45px;
+            margin-left: -190px;
+        }
+        button{
+            background-color: lightskyblue;
+            color: white;
+            width: 207px;
+            font-size: large;
+            border-left-style: dotted;
+        }
+        .srcc{
+            background-color: grey;
+            width:200px;
+            height: 200px;
+            border: solid grey 5px;
+            border-radius: 7px;
+        }
+        #img{
+            background-color: grey;
+            margin-top: 25px;
+            
+        }
+    </style>
+</head>
+<body >
+    <h1>WHAT DOES YOUR NAME SAY ABOUT YOUR PERSONALITY?</h1>
+   <DIV  class="box">
+    <span style="display: flex; float:left;">
+        <h3>ENTER YOUR NAME </h3>
+        <br>
+      <input type="text"  id="name">
+    </span> 
+    
+      <span style="display: flex; float:right;">
+        <h3>ENTER YOUR GENDER</h3>
+        <br><input type="text"  id="Gender">
+    </span>  
+    
+    <br>
+    <div id="img"><img src="cute.jpg" alt="" class="srcc"></div><br>
+    <button>CLICK ME</button>
+    </DIV>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(document).ready(function(){
+            $('button').click(function(){
+                const names=$('#name').val(); 
+                  const Genders=$('#Gender').val();
+                alert(names);
+                $('.srcc').attr('src',`https://joeschmoe.io/api/v1/${Genders}/${names}`);
+            });
+        });
+    </script>
+</body>
+</html>
